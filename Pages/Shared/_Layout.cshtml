@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ePortfolio</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ePortfolio.styles.css" asp-append-version="true" />
+
+    <style>
+        /* Centering the navigation bar */
+        .navbar {
+            text-align: center;
+            background-color: #f8f9fa; /* Background color */
+            padding: 15px 0; /* Padding for the top and bottom */
+        }
+
+        /* Centering the navigation items */
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar li {
+            display: inline-block;
+            margin-right: 20px; /* Adjust as needed */
+        }
+
+        .navbar li:last-child {
+            margin-right: 0; /* Remove margin from the last item */
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/AboutMe">About Me</a></li>
+            <li><a href="/Contact">Contact</a></li>
+            <li><a href="/Projects">Projects</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
